@@ -19,9 +19,20 @@ def getRating(username):
         temp = rating[0].a.text.split()
         name = soup.find_all('h2')
         name = removeTags(str(name[-1]))
-        print("\nProfile Link :",profileLink)
+        institute = soup.find_all('ul',class_='side-nav')
+        institute = str(bs(institute[0].text,'html.parser')).split('\n')
+        for i in institute:
+            if 'Institution' in i:
+                res = i
+                break
+        print()
+        print("+------------------+")
+        print("| CodeChef Profile |")
+        print("+------------------+")
+        print("Profile Link:",profileLink)
         print("Coder Name:",name)
-        print("Rating of",username+" :", temp[0])
+        print("Rating of",username+":", temp[0])
+        print(res)
     except:
         print("An error Occurred!!")
 

@@ -10,7 +10,7 @@ def removeTags(text):
 
 def getRating(username):
     profileLink = 'https://www.codechef.com/users/'+username
-    print("\nCodeChef Profile Url: "+profileLink)
+    #print("\nCodeChef Profile Url: "+profileLink)
     try:
         page = requests.get(profileLink)
         soup = bs(page.text, 'html.parser')
@@ -32,7 +32,7 @@ def getRating(username):
         print("Profile Link:",profileLink)
         print("Coder Name:",name)
         print("Rating of",username+":", temp[0])
-        print(res)
+        print(res.replace(':',": "))
     except:
         print("An error Occurred!!")
 

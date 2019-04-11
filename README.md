@@ -2,5 +2,4 @@
 A python code to fetch rating of a user from codechef.
 
 ## Usage:
-```python ratingFetcher.py [username]```
-
+```python ratingFetcher.py -cc [codechef-username] -cf [codeforces-username]```

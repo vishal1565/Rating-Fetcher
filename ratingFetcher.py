@@ -10,7 +10,7 @@ try:
         if sys.argv[1]=='-cc':
             getRating(sys.argv[2])
         elif sys.argv[1]=='-cf':
-            cfRating(sys.srgv[2])
+            cfRating(sys.argv[2])
         else:
             printUse()
     elif len(sys.argv)==5:
